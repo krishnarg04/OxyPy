@@ -62,7 +62,7 @@ print(person.greet())
 ### Control Flow
 ```
 // If-else statements
-if age >= 18 {
+if ( age >= 18 ){
     print("Adult")
 } else {
     print("Minor")
@@ -70,13 +70,13 @@ if age >= 18 {
 
 // While loops
 let i: i32 = 0
-while i < 5 {
+while ( i < 5 ){
     print(i)
     i = i + 1
 }
 
 // For loops with ranges
-for i in 0..5 {
+for (i in ./[0,5,1]) {
     print(i)
 }
 ```

@@ -6,6 +6,7 @@ mod AstTree;
 mod Environment;
 mod runtime;
 mod Functions;
+mod Repl;
 
 use tokenizer::Tokenizer;
 use AstTree::ASTParser;
@@ -15,6 +16,10 @@ use runtime::Runtime;
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let args: Vec<String> = std::env::args().collect();
     
+    if args.len() == 1 {
+        Repl::start_repl();
+    }
+
     if args.len() > 1 && args[1] == "--test" {
         return Ok(());
     }
